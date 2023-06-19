@@ -1,0 +1,623 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.p-color {
+  color: var(--p-color);
+}
+
+.h-color {
+  color: var(--h-color);
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+}
+
+:root {
+  --main-color : #0078FF;
+  --p-color : #8f8d8d;
+  --h-color : #1E1E1E;
+  --bg-color: #F5F5F5;
+}
+
+/*Start Loading Screen*/
+.loadingScreen {
+  background-color: #000;
+  z-index: 99999;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, cyan, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+/*End Of Loading Screen*/
+
+/*Start Color Options*/
+.colorsOption {
+  top: 30%;
+}
+
+.colorsOption .colors li {
+  width: 35px;
+  height: 35px;
+  margin: 4px;
+}
+
+.cycle {
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+/*End Of Color Options*/
+
+
+/*Start Home*/
+.navbar {
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.navbar li a {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar li a:hover {
+  color: white;
+}
+
+.navbar li a:hover::after , .navbar li .active::after{
+  content: " ";
+  width: 60%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.home {
+  background-image: url('../Images/intro-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -2;
+}
+
+.home .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.home .home-content {
+  z-index: 0;
+}
+.home .home-content h2 {
+  font-size: 4.5em;
+}
+
+.home .typed-string::after {
+  content: "|";
+  animation-name: typed ;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typed {
+  0% {content: "C|";}
+  1% {content: "CE|";}
+  1% {content: "CEO|";}
+  2% {content: "CEO D|";}
+  2% {content: "CEO De|";}
+  3% {content: "CEO Dev|";}
+  3% {content: "CEO DevF|";}
+  4% {content: "CEO DevFo|";}
+  4% {content: "CEO DevFol|";}
+  5% {content: "CEO DevFolio|";}
+  13% {content: "CEO DevFolio|";}
+  14% {content: "CEO DevFoli|";}
+  14% {content: "CEO DevFol|";}
+  15% {content: "CEO DevFo|";}
+  15% {content: "CEO DevF|";}
+  16% {content: "CEO Dev|";}
+  16% {content: "CEO De|";}
+  17% {content: "CEO D|";}
+  17% {content: "CEO|";}
+  18% {content: "CE|";}
+  18% {content: "C|";}
+  19% {content: "|";}
+  19% {content: "W|";}
+  20% {content: "We|";}
+  20% {content: "Web|";}
+  21% {content: "Web D|";}
+  21% {content: "Web De|";}
+  22% {content: "Web Dev|";}
+  23% {content: "Web Deve|";}
+  23% {content: "Web Devel|";}
+  24% {content: "Web Develo|";}
+  24% {content: "Web Develop|";}
+  25% {content: "Web Developer|";}
+  33% {content: "Web Developer|";}
+  34% {content: "Web Develope|";}
+  34% {content: "Web Develop|";}
+  35% {content: "Web Develo|";}
+  35% {content: "Web Devel|";}
+  36% {content: "Web Deve|";}
+  36% {content: "Web Dev|";}
+  37% {content: "Web De|";}
+  37% {content: "Web Des|";}
+  38% {content: "Web Desi|";}
+  38% {content: "Web Desig|";}
+  39% {content: "Web Design|";}
+  39% {content: "Web Designer|";}
+  47% {content: "Web Designer|";}
+  48% {content: "Web Designe|";}
+  48% {content: "Web Design|";}
+  49% {content: "Web Desig|";}
+  49% {content: "Web Desi|";}
+  50% {content: "Web Des|";}
+  50% {content: "Web De|";}
+  51% {content: "Web D|";}
+  51% {content: "Web|";}
+  52% {content: "We|";}
+  52% {content: "We|";}
+  53% {content: "W|";}
+  53% {content: "|";}
+  54% {content: "F|";}
+  54% {content: "Fr|";}
+  55% {content: "Fro|";}
+  55% {content: "Fron|";}
+  56% {content: "Front|";}
+  56% {content: "FrontE|";}
+  57% {content: "FrontEnd|";}
+  57% {content: "FrontEnd|";}
+  58% {content: "FrontEnd D|";}
+  58% {content: "FrontEnd De|";}
+  59% {content: "FrontEnd Dev|";}
+  59% {content: "FrontEnd Deve|";}
+  60% {content: "FrontEnd Devel|";}
+  60% {content: "FrontEnd Develo|";}
+  61% {content: "FrontEnd Develop|";}
+  61% {content: "FrontEnd Developer|";}
+  69% {content: "FrontEnd Developer|";}
+  70% {content: "FrontEnd Develope|";}
+  70% {content: "FrontEnd Develop|";}
+  71% {content: "FrontEnd Develo|";}
+  71% {content: "FrontEnd Devel|";}
+  72% {content: "FrontEnd Deve|";}
+  72% {content: "FrontEnd Dev|";}
+  73% {content: "FrontEnd De|";}
+  73% {content: "FrontEnd D|";}
+  74% {content: "FrontEnd|";}
+  74% {content: "FrontEn|";}
+  75% {content: "FrontE|";}
+  75% {content: "Front|";}
+  76% {content: "Fron|";}
+  76% {content: "Fro|";}
+  77% {content: "Fr|";}
+  77% {content: "F|";}
+  78% {content: "|";}
+  78% {content: "G|";}
+  79% {content: "Gr|";}
+  79% {content: "Gra|";}
+  80% {content: "Grap|";}
+  80% {content: "Graph|";}
+  81% {content: "Graphi|";}
+  81% {content: "Graphic|";}
+  82% {content: "Graphic D|";}
+  82% {content: "Graphic De|";}
+  83% {content: "Graphic Des|";}
+  83% {content: "Graphic Desi|";}
+  84% {content: "Graphic Desig|";}
+  84% {content: "Graphic Design|";}
+  85% {content: "Graphic Designer|";}
+  93% {content: "Graphic Designer|";}
+  93% {content: "Graphic Designe|";}
+  94% {content: "Graphic Design|";}
+  94% {content: "Graphic Desig|";}
+  95% {content: "Graphic Desi|";}
+  95% {content: "Graphic Des|";}
+  96% {content: "Graphic De|";}
+  96% {content: "Graphic D|";}
+  97% {content: "Graphic|";}
+  97% {content: "Graphi|";}
+  98% {content: "Graph|";}
+  98% {content: "Grap|";}
+  99% {content: "Gra|";}
+  99% {content: "Gr|";}
+  100% {content: "G|";}
+  100% {content: "|";}
+}
+/*End Of Home*/
+
+/*Start About*/
+.about h2::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 3px;
+  color: var(--main-color);
+  background-color: var(--main-color);
+  top: 100%;
+  left: 0;
+}
+/*End Of About*/
+
+/*Start Services*/
+.services .content::after {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 5px;
+  color: var(--main-color);
+  background-color: var(--main-color);
+  top: 100%;
+  left: 47.5%;
+}
+
+.services .card-body .icon-content {
+ height: 90px;
+ width: 90px;
+ padding: 3em;
+ border: 10px solid var(--main-color);
+ transition: 0.3s all ease-in-out;
+ -webkit-transition: 0.3s all ease-in-out;
+ -moz-transition: 0.3s all ease-in-out;
+ -ms-transition: 0.3s all ease-in-out;
+ -o-transition: 0.3s all ease-in-out;
+}
+
+.services .card-body:hover .icon-content{
+  border: 10px solid #C6E1FF;
+  color: white;
+  background-color: var(--main-color);
+}
+
+.numbers {
+  background-image: url('../Images/counters-bg.jpg');
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -2;
+  height: fit-content;
+  padding-top:8%;
+  padding-bottom: 8%;
+}
+
+.numbers .content {
+  z-index: 0;
+}
+
+.numbers .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0077ffa2;
+  z-index: -1;
+}
+
+.numbers .icon-content {
+  height: 90px;
+  width: 90px;
+  border: 10px solid #C6E1FF;
+}
+
+.numbers .ratedOne-string::before {
+  content: "450";
+  animation-name: ratedOne ;
+  animation-duration: 10s;
+}
+
+@keyframes ratedOne {
+  0% {content: "45";}
+  1% {content: "90";}
+  2% {content: "135";}
+  3% {content: "180";}
+  4% {content: "225";}
+  5% {content: "270";}
+  6% {content: "315";}
+  7% {content: "360";}
+  8% {content: "405";}
+  9% {content: "450";}
+}
+
+.numbers .ratedTwo-string::before {
+  content: "15";
+  animation-name: ratedTwo ;
+  animation-duration: 10s;
+}
+
+@keyframes ratedTwo {
+  0% {content: "1";}
+  1% {content: "3";}
+  2% {content: "4";}
+  3% {content: "6";}
+  4% {content: "7";}
+  5% {content: "9";}
+  6% {content: "10";}
+  7% {content: "12";}
+  8% {content: "13";}
+  9% {content: "15";}
+}
+
+.numbers .ratedThree-string::before {
+  content: "550";
+  animation-name: ratedThree ;
+  animation-duration: 10s;
+}
+
+@keyframes ratedThree {
+  0% {content: "55";}
+  1% {content: "110";}
+  2% {content: "165";}
+  3% {content: "220";}
+  4% {content: "275";}
+  5% {content: "330";}
+  6% {content: "385";}
+  7% {content: "440";}
+  8% {content: "495";}
+  9% {content: "550";}
+}
+
+.numbers .ratedFour-string::before {
+  content: "36";
+  animation-name: ratedFour ;
+  animation-duration: 10s;
+}
+
+@keyframes ratedFour {
+  0% {content: "5";}
+  1% {content: "8";}
+  2% {content: "12";}
+  3% {content: "15";}
+  4% {content: "19";}
+  5% {content: "22";}
+  6% {content: "26";}
+  7% {content: "29";}
+  8% {content: "33";}
+  9% {content: "36";}
+}
+/*End Of Services*/
+
+/*Start Portfolio*/
+.work .content::after {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 5px;
+  color: var(--main-color);
+  background-color: var(--main-color);
+  top: 100%;
+  left: 47.5%;
+}
+
+.work .portfolio .card .icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+}
+
+.work .portfolio .card {
+  overflow: hidden;
+  display: block;
+}
+
+.work .portfolio .card img{
+  transition: 0.7s all ease-in-out;
+  -webkit-transition: 0.7s all ease-in-out;
+  -moz-transition: 0.7s all ease-in-out;
+  -ms-transition: 0.7s all ease-in-out;
+  -o-transition: 0.7s all ease-in-out;
+}
+
+.work .portfolio .card:hover img{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.slider .carousel-inner .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0077ffa2;
+  z-index: -1;
+}
+
+.slider .carousel-item img{
+  position: relative;
+  z-index: -2;
+}
+ 
+.slider .carousel-caption {
+z-index: 0;
+}
+/*End Of Portfolio*/
+
+/*Start Blog*/
+.blog .content::after {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 5px;
+  color: var(--main-color);
+  background-color: var(--main-color);
+  top: 100%;
+  left: 47.5%;
+}
+
+.blog .idea .special img{
+width: 30px;
+height: 30px;
+}
+
+.blog .idea .special {
+  border-top: 1px solid rgb(187, 186, 186);
+}
+/*End Of Blog*/
+
+/*Start Contact*/
+.contact {
+  background-image: url('../Images/overlay-bg.jpg');
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -2;
+  height: fit-content;
+  padding-top:10%;
+  padding-bottom: 10%;
+}
+
+.contact .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 119, 255, 0.6);
+  z-index: -1;
+}
+
+.contact .call h2::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 3px;
+  color: var(--main-color);
+  background-color: var(--main-color);
+  top: 100%;
+  left: 0;
+}
+
+.contact form input , .contact form textarea {
+  border: 1px solid rgb(185, 184, 184);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.contact form input:hover , .contact form textarea:hover{
+  border: 1px solid var(--main-color);
+  box-shadow: 2px 2px 2px var(--main-color);
+}
+
+.contact .icon .brand {
+  width: 50px;
+  height: 50px;
+  padding: 11px;
+  font-size: 1.5em;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.contact .icon .brand:hover {
+ color: white;
+ background-color: var(--main-color);
+ border: 3px solid #C6E1FF;
+}
+
+.contact button {
+  color: white;
+  font-size: 1.2em;
+  background-color: var(--main-color);
+  padding: 4% 8%;
+  border: 2px solid transparent;
+}
+
+.contact button:hover {
+  background-color: #025ec7;
+  border: 2px solid #C6E1FF;
+}
+/*End Of Contact*/
